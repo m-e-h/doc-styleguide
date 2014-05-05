@@ -8,7 +8,7 @@ var comments = {
 		{
 		"el": ".sg-colors",
 		"title" : "Colors",
-		"comment": "This initial color palette is based on the newly approve shield logo.</p>"
+		"comment": "This initial color pallet is based on the newly approve shield logo.</p>"
 	},
 	{
 		"el": ".logo",
