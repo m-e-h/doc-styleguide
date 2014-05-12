@@ -7,12 +7,49 @@
 	text-align: center;
 	padding: $pad;
 	margin-bottom: $space-half;
-	border: 1px solid $gray;
-	background: $gray-light;
+	color: $gray-dark;
+	@include border-radius(6px);
 }
 
 .alert-error {
-	color: $error;
-	border-color: $error;
-	background: #ffbebe;
+	background: $error;
+}
+
+.alert-information {
+	background: $information;
+}
+
+.alert-valid {
+	background: $valid;
+}
+
+.alert-warning {
+	background: $warning;
+}
+
+
+.alert:before {
+	display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.alert-error:before {
+content: "\f057";
+}
+
+.alert-information:before {
+content: "\f05a";
+}
+
+.alert-valid:before {
+content: "\f058";
+}
+
+.alert-warning:before {
+content: "\f06a";
 }

@@ -2,6 +2,11 @@
     $MEDIA ELEMENTS
 \*------------------------------------*/
 
+img.avatar {
+@include scut-circle(4em, white);
+  border: 1px solid #e7e7e7;
+}
+
 /* Flexible Media */
 img, video, object {
 	max-width: 100%;
@@ -17,7 +22,4 @@ figure {
 	img {
 		margin-bottom: $space-half;
 	}
-}
-figcaption {
-	font-style: italic;
 }

@@ -6,14 +6,9 @@ ol, ul {
 
 /* Definition Lists */
 dl {
-	overflow: hidden;
-	margin: 0 0 $space;
+	@include scut-key-val("\2014", 0.5em, 8em, 1em, 0.5em);
+  & > dt {
+    font-weight: bold;
+  }
 }
 
-dt {
-	font-weight: bold;
-}
-
-dd {
-	margin-left: 0;
-}

@@ -5,11 +5,10 @@ p {
 
 /* Blockquote */
 blockquote {
-    font-style:italic;
-    border-left: 1px solid $gray;
-    color: $gray;
+    border-left: 5px solid $gray-light-3;
 	padding-left: $pad;
 	margin-bottom: $space;
+    @include scut-rem-fallback(17.5);
 }
 
 /* Horizontal Rule */ 
@@ -23,4 +22,15 @@ hr {
 abbr {
     border-bottom: 1px dotted $gray;
     cursor: help;
+}
+
+figcaption, cite {
+    color: $gray;
+    font-style: normal;
+    @include scut-rem-fallback(15);
+}
+
+figcaption:before {
+    content: $scut-mdash;
+    color: $gray;
 }
