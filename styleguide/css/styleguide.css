@@ -101,7 +101,6 @@
     list-style: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
   .sg-header a {
-    font-size: 70%;
     color: gray;
     text-decoration: none;
     display: block;
@@ -466,7 +465,6 @@ span.sg-pattern-state:before {
 .sg-pattern-head {
   margin: 2em 0;
   font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  font-size: 70%;
   font-weight: normal;
   padding: 1em 0;
   border-bottom: 1px solid gray; }

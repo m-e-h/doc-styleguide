@@ -1,7 +1,5 @@
-# require 'compass/import-once/activate'
-# Require any additional compass plugins here.
-# require 'compass-normalize'
-# require 'susy'
+require 'susy'
+require 'scut'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
