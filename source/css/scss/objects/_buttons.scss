@@ -39,7 +39,7 @@
 // 	font-style: italic;
 // }
 
-.btn {
+input[type="submit"], .btn {
     display: inline-block;
     *display: inline; /*IE 6/7*/
     zoom: 1;
@@ -54,7 +54,7 @@
     -ms-user-select: none;
     user-select: none;
 
-        font-family: inherit;
+    font-family: inherit;
     font-size: 100%;
     *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
     *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
@@ -64,11 +64,14 @@
     *color: #444; /* IE 6 & 7 */
     border: 1px solid #999;  /*IE 6/7/8*/
     border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
-    background-color: #E6E6E6;
+    background-color: $gray-light-2;
     text-decoration: none;
     border-radius: 2px;
 	
 	&:hover, &:focus {
+            color: #444; /* rgba not supported (IE 8) */
+    color: rgba(0, 0, 0, 0.80); /* rgba supported */
+    *color: #444; /* IE 6 & 7 */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
     background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
@@ -107,20 +110,22 @@
 	font-style: italic;
 }
 
-
+.btn.alt {
+background-color: $shield-blue;
+color: #fff;
+}
 
 
 /* Firefox: Get rid of the inner focus border */
-.btn::-moz-focus-inner,.pure-button::-moz-focus-inner {
+.btn::-moz-focus-inner,input[type="submit"]::-moz-focus-inner {
     padding: 0;
     border: 0;
 }
 
 
-.btn:focus, .pure-button:focus {
+.btn:focus, input[type="submit"]:focus {
     outline: 0;
 }
-.btn:active, .pure-button-active,
-.pure-button:active {
+.btn:active, input[type="submit"]:active {
     box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
 }

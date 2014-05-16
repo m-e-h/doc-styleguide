@@ -22,13 +22,15 @@
 	}
 
 	a {
-		background: $gray-dark;
-		color: $white;
-		display: block;
-		padding: $pad-half;
+		@extend .btn;
+		// background: $gray-light;
+		// color: $gray-dark;
+		// display: block;
+		// padding: $pad-half;
 
 		&:hover {
-			background: $gray;
+			@extend .btn:hover;
+			//background: $gray-light-2;
 		}
 	}
 }

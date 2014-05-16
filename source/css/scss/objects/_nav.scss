@@ -50,3 +50,8 @@
 		padding: $pad;
 	}
 }
+
+
+.breadcrumbs {
+	@include scut-list-divided("/");
+}

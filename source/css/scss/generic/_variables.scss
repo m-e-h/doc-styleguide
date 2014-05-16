@@ -2,20 +2,33 @@
     $VARIABLES
 \*------------------------------------*/
 
+$susy: (
+	columns: 12,
+	gutter-position: inside,
+	);
+
+
+
 //Colors
+$shield-blue : #5D84C0;
+$shield-green : #3BA165;
+$light-gold : #F9E262;
+$dark-gold : #DB9C34;
+$flat-ruby : #F06A6F;
 $gray : #939598;
-$gray-light : #F1F2F2;
-$gray-light-2 : #E6E7E8;
-$gray-light-3 : #BCBEC0;
+$gray-light : #FBFCFC;
+$gray-light-2 : #ECF0F1;
+$gray-light-3 : #CBD0D3;
 $gray-med : #939598;
-$gray-dark : #595959;
-$gray-dark-2 : #131313;
+$gray-dark : #5E6768;
+$gray-dark-2 : #151D1E;
 $white : #fff;
 $black : #000;
-$dim : rgba(0,0,0,0.5);
-$error : #FFE8AA;
+$dim : rgba(0,0,0,0.3);
+$pale : rgba(255, 255, 255, 0.4);
+$error : #F5B7AB;
 $valid : #C5E5DE;
-$warning : #F5B7AB;
+$warning : #FFE8AA;
 $information : #B1E0EC;
 
 

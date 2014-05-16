@@ -58,3 +58,15 @@
      border-top-left-radius: $radius;
      background-clip: padding-box;
 }
+
+
+
+
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
