@@ -1,9 +1,18 @@
-<li class="comment-container">
-	<div class="comment-meta">
-		{{> atoms-avatar }}
-		<h4 class="comment-name"><a href="#">{{ name.first }} {{ name.last }}</a></h4>
-	</div>
-	<div class="comment-text">
-		<p>{{ description }}</p>
-	</div>
+<li id="comment-1" class="comment" itemprop="comment" itemscope="itemscope" itemtype="http://schema.org/UserComments">
+	<article>
+	<div class="comment-image">
+			{{> atoms-avatar }}</div>
+	<div class="comment-content" itemprop="commentText">
+			<h1 class="font-headlines"><cite class="comment-author" itemprop="creator" itemscope="itemscope" itemtype="http://schema.org/Person"><a href="https://wordpress.org/" rel="external nofollow" class="url fn n" itemprop="url"><span itemprop="name">John Doe</span></a></cite></h1>
+			<p>{{ description }}</p>
+	
+
+		<footer class="comment-meta">
+			<time class="comment-published" datetime="2014-04-22T14:20:21-04:00" title="Tuesday, April 22, 2014, 2:20 pm" itemprop="commentTime">1 month ago</time>
+			<a class="comment-permalink" href="http://127.0.0.1:8080/wordpress/hello-world/#comment-1" itemprop="url">&#xf0c1</a>
+		</footer><!-- .comment-meta -->
+		<a itemprop="replyToUrl" class="comment-reply-link font-secondary" href="/wordpress/hello-world/?replytocom=1#respond" onclick="return addComment.moveForm(&quot;comment-1&quot;, &quot;1&quot;, &quot;respond&quot;, &quot;1&quot;)">Reply</a>
+</div><!-- .comment-content -->
+		</article>
+
 </li>

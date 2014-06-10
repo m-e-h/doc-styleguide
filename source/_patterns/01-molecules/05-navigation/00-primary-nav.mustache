@@ -1,8 +1,18 @@
-<nav id="nav" class="nav">
-	<ul class="nav-list">
-		<li><a href="{{ url }}">Home</a></li>
-		<li><a href="{{ url }}">About</a></li>
-		<li><a href="{{ url }}">Blog</a></li>
-		<li><a href="{{ url }}">Contact</a></li>
-	</ul>
-</nav><!--end .nav-->
+
+    <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li class="nav-link"><a href="{{ url }}">Products</a></li>
+        <li class="nav-link"><a href="{{ url }}">About Us</a></li>
+        <li class="nav-link"><a href="{{ url }}">Contact</a></li>
+        <li class="nav-link more"><a href="{{ url }}">More</a>
+          <ul class="submenu">
+            <li><a href="{{ url }}">Submenu Item</a></li>
+            <li><a href="{{ url }}">Another Item</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://googledrive.com/host/0B-B36bvbQPRlenJfTnYycVIwTWc/naver.js"></script>

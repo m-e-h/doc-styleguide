@@ -1,9 +1,17 @@
 <!-- Begin .header -->
 <header id="header" class="site-header" role="banner">
-	{{> atoms-logo }}
-	<a href="#search-form" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
-	<a href="#nav" class="nav-toggle nav-toggle-menu icon-menu"><span class="is-vishidden">Menu</span></a>
-	{{> molecules-primary-nav }}
-	{{> molecules-search }}
+<nav id="menu-primary" class="menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <a href="{{ url }}" class="logo">
+      {{> atoms-favicon-32x32 }}
+    </a>
+{{> molecules-primary-nav }}
+    <div class="navigation-tools">
+{{> molecules-search }}
+  </div>
+	</nav>
 </header>
 <!-- End .header -->
+
+
+
+

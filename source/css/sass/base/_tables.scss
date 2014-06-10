@@ -1,0 +1,106 @@
+// table {
+//   border-collapse: collapse;
+//   margin: ($base-line-height / 2) 0;
+//   table-layout: fixed;
+//   width: 100%;
+// }
+
+// th {
+//   border-bottom: 1px solid darken($base-border-color, 15%);
+//   font-weight: bold;
+//   padding: ($base-line-height / 2) 0;
+//   text-align: left;
+// }
+
+// td {
+//   border-bottom: 1px solid $base-border-color;
+//   padding: ($base-line-height / 2) 0;
+// }
+
+// tr, td, th {
+//   vertical-align: middle;
+// }
+
+
+
+
+
+
+
+
+
+
+table {
+  $table-border-color: $base-border-color;
+  $table-border: 1px solid $table-border-color;
+  $table-background: lighten($table-border-color, 17);
+  $table-header-color: darken($table-background, 4);
+  $table-hover-color: darken($table-background, 5);
+  $table-stripe-color: lighten($table-background, 10);
+  $table-stripe-color-hover: darken($table-stripe-color, 5);
+  $table-padding: 0.5em;
+
+  border: $table-border;
+  border-left: 0px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: $base-border-radius;
+
+  width: 100%;
+  text-align: left;
+  
+  tbody {
+    background-color: $table-background;
+    tr:hover > td, tr:hover > th {
+      background-color: $table-hover-color;
+    }
+    tr:nth-child(even) {
+      background-color: $table-stripe-color;
+      &:hover > td {
+        background-color: $table-stripe-color-hover;
+      }
+    }
+  }
+
+  thead:first-of-type {
+    tr:first-child > th:first-child {
+      border-top-left-radius: $base-border-radius;
+    }
+
+    tr:first-child > th:last-child {
+      border-top-right-radius: $base-border-radius;
+    }
+  }
+
+  tbody:last-child {
+    tr:last-child > td:first-child {
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    tr:last-child > td:last-child {
+      border-bottom-right-radius: $base-border-radius;
+    }
+  }
+
+  thead {
+    th {
+      background-color: $table-header-color;
+      padding: $table-padding;
+      border-left: 1px solid $table-border-color;
+      border-bottom: 0px;
+      font-weight: bold;
+    }
+  }
+
+  tbody {
+    background-color: $table-background;
+
+    td {
+      padding: $table-padding;
+      border-left: 1px solid $table-border-color;
+      border-bottom: 0px;
+
+
+    }
+  }
+}

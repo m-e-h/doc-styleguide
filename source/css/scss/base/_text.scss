@@ -11,12 +11,24 @@ blockquote {
     @include scut-rem-fallback(17.5);
 }
 
-/* Horizontal Rule */ 
+pre {
+line-height: 26px;
+padding: 0 1em 1em;
+background: #f0f0f0;
+@include border-radius;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
 hr {
-	border: 0;
-    height: 2px;
-    background: $gray-light-2;
-    margin: $space-double 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $gray-light-3;
+    margin: 1em 0;
+    padding: 0;
 }
 
 abbr {

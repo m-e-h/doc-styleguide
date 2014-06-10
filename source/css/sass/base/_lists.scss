@@ -1,0 +1,276 @@
+/**
+*
+* List
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+
+.text ul,
+.text ol,
+dl {
+  list-style: none;
+  margin: 0;
+  padding-left: 32px;
+}
+@media only screen and (max-width: 619px) {
+
+  .text ul,
+  .text ol,
+  dl {
+    padding-left: 0;
+  }
+}
+
+.text ul ul, .text ul ol,
+.text ol ul,
+.text ol ol,
+dl ul,
+dl ol {
+  padding-left: 0;
+}
+
+
+.text li,
+dt {
+  position: relative;
+  padding-left: 18px;
+}
+
+
+.text ul > li:before {
+  @include icon($square);
+  font-family: "FontAwesome";
+font-size: 8px;
+display: block;
+width: 16px;
+text-align: left;
+font-weight: 400;
+line-height: 2.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text ul > li > ul > li:before, .text ol > li > ol > li:before {
+  //@include icon($square-o);
+  color: $gray-light-3;
+}
+
+
+.text ol {
+  counter-reset: list;
+}
+
+.text ol > li {
+  padding-left: 32px;
+}
+
+.text ol > li:before {
+  counter-increment: list;
+  content: "0" counter(list);
+  color: inherit;
+  font-weight: 400;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+
+.text ol > li:nth-child(10n) ~ li:before, ol > li:nth-child(10n):before {
+  content: counter(list);
+}
+
+
+ul ol,
+ol ul,
+ul ul,
+ol ol {
+  padding-top: 0;
+}
+
+/*==========  DEFINITION LIST  ==========*/
+
+dt {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+dt:before {
+  @include icon($info-circle);
+  font-family: "FontAwesome";
+  font-size: 13px;
+  display: block;
+  width: 16px;
+  text-align: left;
+  font-weight: normal;
+  line-height: 22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $gray-light-3;
+}
+@media only screen and (min-width: 620px) {
+
+  dt {
+    font-weight: 700;
+  }
+}
+
+
+dd {
+  margin-left: 0;
+  margin-bottom: 26px;
+}
+
+/*==========  LIST LINKS  ==========*/
+
+ul.list-links li:before {
+  display: none;
+}
+
+ul.list-links a {
+  font-weight: 400;
+}
+
+ul.list-links a:before {
+  content: "\e001";
+  font-family: "icons";
+  font-size: 4px;
+  display: block;
+  width: 16px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+ul.list-links a:before {
+  font-size: 4px;
+}
+
+ul.list-links.list-links--primary {
+  letter-spacing: 1px;
+}
+
+ul.list-links.list-links--primary a {
+  font-weight: 400;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  line-height: 1;
+  text-decoration: none;
+}
+
+ul.list-links.list-links--primary a:before {
+  content: "\e005";
+  font-family: "icons";
+  font-size: 13px;
+  display: block;
+  width: 16px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+ol.list-links li:before {
+  display: none;
+}
+
+ol.list-links li a {
+  display: inline-block;
+  font-weight: 300;
+}
+
+ol.list-links li a:before {
+  counter-increment: list;
+  content: "0" counter(list);
+  color: inherit;
+  font-weight: 400;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+
+ol.list-links li:nth-child(10n) ~ li a:before, ol.list-links li:nth-child(10n) a:before {
+  content: counter(list);
+}
+
+ol.list-links.list-links--secondary a:before {
+  display: none;
+}
+
+
+.list-links--secondary {
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+  letter-spacing: 0;
+  padding-left: 0;
+}
+
+.list-links--secondary li {
+  padding-left: 0;
+}
+
+/*==========  ANCHOR LIST  ==========*/
+
+.list-anchor {
+  padding-left: 0;
+}
+
+.list-anchor li {
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+  letter-spacing: 0;
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.list-anchor li:before {
+  display: none;
+}
+
+.list-anchor a {
+  display: inline-block;
+  padding-left: 16px;
+}
+
+.list-anchor a:before {
+  content: "\e001";
+  font-family: "icons";
+  font-size: 4px;
+  display: block;
+  width: 16px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.list-anchor a:before {
+  font-size: 4px;
+}
+
+
+.text ol > li:before, .text ul > li:before {
+  color: $gray-med;
+}

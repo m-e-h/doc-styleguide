@@ -1,33 +1,93 @@
-.tabs {
-	overflow: hidden;
+/**
+ * Whistles
+ * @link http://themehybrid.com/plugins/whistles
+ */
 
-	ul {
-		display: table;
-		width: 100%;
+.whistles::after,
+.whistle-content::after {
+	content:    ".";
+	display:    block;
+	height:     0;
+	clear:      both;
+	visibility: hidden;
+}
+
+.whistles {
+	clear:       both;
+	width:       100%;
+	margin:      0 0 1.5rem;
+}
+
+	.whistle-title:hover { 
+		cursor: pointer; 
 	}
-	
-	li {
-		display: table-cell;
-		text-align: center;
-		border-right: 1px solid $gray-light-3;
 
-		&:last-child {
-			border-right: 0;
-		}
+	.whistle-content { 
+		overflow: hidden; 
 	}
 
-	a {
-		display: block;
-		padding: $pad-half;
-		background: $gray;
+/* === Tabs === */
 
-		&:hover, &:focus {
-			background: $gray-light-3;
-		}
-
-		&.active {
-			background: $gray-dark;
-			color: $white;
-		}
+	/* Unordered list. */
+	.whistles-tabs .whistles-tabs-nav {
+		position: relative;
+		z-index: 1;
+		list-style: none;
+		margin: 0;
 	}
+
+		/* Individual list item. */
+		.whistles-tabs-nav li { 
+			display: inline; 
+		}
+
+.whistles-tabs-nav li a, .whistles-toggle .whistle-title, .whistles-accordion .whistle-title {
+background-color: $gray-light-2;
+@extend %easy;
+&:hover {
+background: $gray-light-3;
+color: gray-dark;
+}
+}
+
+.whistles-tabs .whistles-tabs-nav li[aria-selected=true] a {
+background-color: #fff;
+}
+
+			/* Link within list item. */
+			.whistles-tabs-nav li a {
+				display:     inline-block;
+				padding:     0.75rem 1.5rem;
+				font-size:   0.9375rem;
+				font-weight: 700;
+				border:      1px solid;
+				@include border-top-radius(2px);
+			}
+
+				/* Wraps all of the tab content panels. */
+	.whistles-tabs .whistles-tabs-wrap {
+		position: relative;
+		clear:    both;
+		top:      -1px;
+		padding:  1.5rem 1.5rem 0;
+		border:   1px solid;
+		border-radius: 0 2px 2px 2px;
+	}
+
+.whistles-tabs-nav li a, .whistles-tabs .whistles-tabs-nav li a:hover, .whistles-tabs .whistles-tabs-wrap, .whistles-toggle .whistle-title, .whistles-accordion .whistle-title, .whistles-toggle .whistle-content, .whistles-accordion .whistle-content {
+border-color: $gray-light-3;
+}
+
+			.whistles-tabs-nav li a { 
+				border-right-width: 0; 
+			}
+
+			.whistles-tabs-nav li:last-child a { 
+				border-right-width: 1px; 
+			}
+
+
+
+	.whistles-tabs .whistles-tabs-nav li[aria-selected=true] a {
+border-bottom-color: #fff;
 }

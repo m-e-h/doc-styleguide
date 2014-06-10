@@ -13,6 +13,14 @@
 	transition: $transition-property $transition-time $method;
 }
 
+%easy {
+-webkit-transition: all 0.1s ease-in-out;
+-moz-transition: all 0.1s ease-in-out;
+-ms-transition: all 0.1s ease-in-out;
+-o-transition: all 0.1s ease-in-out;
+transition: all 0.1s ease-in-out;
+}
+
 /* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
 	Usage: @include font-size(1, large);
 */
@@ -22,7 +30,7 @@
   font-size: $decimal-size * 1rem;
 }
 
-@mixin border-radius($radius) {
+@mixin border-radius($radius: 3px) {
   -webkit-border-radius: $radius;
   border-radius: $radius;
   background-clip: padding-box;  /* stops bg color from leaking outside the border: */
@@ -30,28 +38,28 @@
 
 // Single side border-radius
 
-@mixin border-top-radius($radius) {
+@mixin border-top-radius($radius: 3px) {
   -webkit-border-top-right-radius: $radius;
   border-top-right-radius: $radius;
    -webkit-border-top-left-radius: $radius;
    border-top-left-radius: $radius;
    background-clip: padding-box;
 }
-@mixin border-right-radius($radius) {
+@mixin border-right-radius($radius: 3px) {
   -webkit-border-bottom-right-radius: $radius;
   border-bottom-right-radius: $radius;
      -webkit-border-top-right-radius: $radius;
      border-top-right-radius: $radius;
      background-clip: padding-box;
 }
-@mixin border-bottom-radius($radius) {
+@mixin border-bottom-radius($radius: 3px) {
   -webkit-border-bottom-right-radius: $radius;
   border-bottom-right-radius: $radius;
    -webkit-border-bottom-left-radius: $radius;
    border-bottom-left-radius: $radius;
    background-clip: padding-box;
 }
-@mixin border-left-radius($radius) {
+@mixin border-left-radius($radius: 3px) {
   -webkit-border-bottom-left-radius: $radius;
   border-bottom-left-radius: $radius;
      -webkit-border-top-left-radius: $radius;
@@ -70,3 +78,12 @@
 }
 
 
+%font-awesome {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,109 @@
+
+.icon-bar li{
+	margin: 1em;
+	font-size: 1.8em;
+}
+
+.fa-twitter {
+	color: #40A8D0;
+&:hover {
+	color: lighten(#40A8D0, 10%);
+		}
+}
+
+.fa-facebook-square {
+	color: #4862A1;
+&:hover {
+	color: lighten(#4862A1, 10%);
+		}
+}
+
+.fa-linkedin {
+	color: #1C85C2;
+&:hover {
+	color: lighten(#1C85C2, 10%);
+		}
+}
+
+.fa-pinterest {
+	color: #FB2848;
+&:hover {
+	color: lighten(#FB2848, 10%);
+		}
+}
+
+.fa-google-plus {
+	color: #DF5241;
+&:hover {
+	color: lighten(#DF5241, 10%);
+		}
+}
+
+.fa-youtube {
+	color: #E2544C;
+&:hover {
+	color: lighten(#E2544C, 10%);
+		}
+}
+
+.fa-rss {
+	color: #F4B83E;
+&:hover {
+	color: lighten(#F4B83E, 10%);
+		}
+}
+
+// .fa-search{color: ;}
+.fa-play-circle-o {
+	color: #1AAF87;
+&:hover {
+	color: lighten(#1AAF87, 10%);
+		}
+}
+
+.fa-file-excel-o {
+	color: #84C46B;
+&:hover {
+	color: lighten(#84C46B, 10%);
+		}
+}
+
+.fa-file-word-o {
+	color: #2980B8;
+&:hover {
+	color: lighten(#2980B8, 10%);
+		}
+}
+
+.fa-file-powerpoint-o {
+	color: #DC5800;
+&:hover {
+	color: lighten(#DC5800, 10%);
+		}
+}
+
+.fa-file-pdf-o {
+	color: #C45052;
+&:hover {
+	color: lighten(#C45052, 10%);
+		}
+}
+
+
+.fav-bar {
+	@include scut-list-divided ("", 1em, $height: 10em)
+	{
+		vertical-align: top;
+	}
+}
+
+
+.mobile-favicon {
+max-width: 64px;
+height: auto;
+}
+
+.logo-full {
+	max-width: 152px;
+	height: auto;
+}

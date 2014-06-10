@@ -1,14 +1,276 @@
-ol, ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
+
 
 /* Definition Lists */
+// dl {
+// 	@include scut-key-val("\2014", 0.5em, 8em, 1em, 0.5em);
+//   & > dt {
+//     font-weight: bold;
+//   }
+// }
+
+
+/**
+*
+* List
+*
+* Google Web Fundamentals
+*
+* R/GA 2014
+* @author Pedro Duarte
+* @author Antoine Grelard
+*
+**/
+/* line 15, ../_sass/_components/_list.scss */
+.text ul,
+.text ol,
 dl {
-	@include scut-key-val("\2014", 0.5em, 8em, 1em, 0.5em);
-  & > dt {
-    font-weight: bold;
+  list-style: none;
+  margin: 0;
+  padding-left: 32px;
+}
+@media only screen and (max-width: 619px) {
+  /* line 15, ../_sass/_components/_list.scss */
+  .text ul,
+  .text ol,
+  dl {
+    padding-left: 0;
+  }
+}
+/* line 25, ../_sass/_components/_list.scss */
+.text ul ul, .text ul ol,
+.text ol ul,
+.text ol ol,
+dl ul,
+dl ol {
+  padding-left: 0;
+}
+
+/* line 31, ../_sass/_components/_list.scss */
+.text li,
+dt {
+  position: relative;
+  padding-left: 18px;
+}
+
+/* line 373, ../_sass/_utils.scss */
+.text ul > li:before {
+  content: "\f0c8";
+  font-family: "FontAwesome";
+  font-size: 5px;
+  display: block;
+  width: 16px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 42, ../_sass/_components/_list.scss */
+.text ol {
+  counter-reset: list;
+}
+/* line 45, ../_sass/_components/_list.scss */
+.text ol > li {
+  padding-left: 32px;
+}
+/* line 391, ../_sass/_utils.scss */
+.text ol > li:before {
+  counter-increment: list;
+  content: "0" counter(list);
+  color: inherit;
+  font-weight: 400;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+/* line 53, ../_sass/_components/_list.scss */
+.text ol > li:nth-child(10n) ~ li:before, ol > li:nth-child(10n):before {
+  content: counter(list);
+}
+
+/* line 65, ../_sass/_components/_list.scss */
+ul ol,
+ol ul,
+ul ul,
+ol ol {
+  padding-top: 0;
+}
+
+/*==========  DEFINITION LIST  ==========*/
+/* line 72, ../_sass/_components/_list.scss */
+dt {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-weight: 400;
+}
+/* line 373, ../_sass/_utils.scss */
+dt:before {
+  content: "\f069";
+  font-family: "FontAwesome";
+  font-size: 13px;
+  display: block;
+  width: 16px;
+  text-align: left;
+  font-weight: normal;
+  line-height: 22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media only screen and (min-width: 620px) {
+  /* line 72, ../_sass/_components/_list.scss */
+  dt {
+    font-weight: 700;
   }
 }
 
+/* line 83, ../_sass/_components/_list.scss */
+dd {
+  margin-left: 0;
+  margin-bottom: 26px;
+}
+
+/*==========  LIST LINKS  ==========*/
+/* line 93, ../_sass/_components/_list.scss */
+ul.list-links li:before {
+  display: none;
+}
+/* line 97, ../_sass/_components/_list.scss */
+ul.list-links a {
+  font-weight: 400;
+}
+/* line 373, ../_sass/_utils.scss */
+ul.list-links a:before {
+  content: "\e001";
+  font-family: "icons";
+  font-size: 4px;
+  display: block;
+  width: 16px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 100, ../_sass/_components/_list.scss */
+ul.list-links a:before {
+  font-size: 4px;
+}
+/* line 107, ../_sass/_components/_list.scss */
+ul.list-links.list-links--primary {
+  letter-spacing: 1px;
+}
+/* line 110, ../_sass/_components/_list.scss */
+ul.list-links.list-links--primary a {
+  font-weight: 400;
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  line-height: 1;
+  text-decoration: none;
+}
+/* line 373, ../_sass/_utils.scss */
+ul.list-links.list-links--primary a:before {
+  content: "\e005";
+  font-family: "icons";
+  font-size: 13px;
+  display: block;
+  width: 16px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 122, ../_sass/_components/_list.scss */
+ol.list-links li:before {
+  display: none;
+}
+/* line 126, ../_sass/_components/_list.scss */
+ol.list-links li a {
+  display: inline-block;
+  font-weight: 300;
+}
+/* line 391, ../_sass/_utils.scss */
+ol.list-links li a:before {
+  counter-increment: list;
+  content: "0" counter(list);
+  color: inherit;
+  font-weight: 400;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+/* line 136, ../_sass/_components/_list.scss */
+ol.list-links li:nth-child(10n) ~ li a:before, ol.list-links li:nth-child(10n) a:before {
+  content: counter(list);
+}
+/* line 142, ../_sass/_components/_list.scss */
+ol.list-links.list-links--secondary a:before {
+  display: none;
+}
+
+/* line 148, ../_sass/_components/_list.scss */
+.list-links--secondary {
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+  letter-spacing: 0;
+  padding-left: 0;
+}
+/* line 152, ../_sass/_components/_list.scss */
+.list-links--secondary li {
+  padding-left: 0;
+}
+
+/*==========  ANCHOR LIST  ==========*/
+/* line 159, ../_sass/_components/_list.scss */
+.list-anchor {
+  padding-left: 0;
+}
+/* line 162, ../_sass/_components/_list.scss */
+.list-anchor li {
+  font-size: 16px;
+  line-height: 1.6250em;
+  /* 26px */
+  padding-top: 1.6250em;
+  padding-bottom: 0;
+  letter-spacing: 0;
+  padding-top: 0;
+  padding-left: 0;
+}
+/* line 167, ../_sass/_components/_list.scss */
+.list-anchor li:before {
+  display: none;
+}
+/* line 173, ../_sass/_components/_list.scss */
+.list-anchor a {
+  display: inline-block;
+  padding-left: 16px;
+}
+/* line 373, ../_sass/_utils.scss */
+.list-anchor a:before {
+  content: "\e001";
+  font-family: "icons";
+  font-size: 4px;
+  display: block;
+  width: 16px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 178, ../_sass/_components/_list.scss */
+.list-anchor a:before {
+  font-size: 4px;
+}

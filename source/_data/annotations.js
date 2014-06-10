@@ -34,6 +34,22 @@ var comments = {
 		"el": ".block-hero",
 		"title" : "Hero",
 		"comment": "<p>The hero area highlights one major story using a large image and a captivating headline.</p>"
+	},
+	{
+		"el": ".sg-fonts",
+		"title" : "Fonts",
+		"comment": "These fonts will more than likely change in favor of a prettier <a href=\"http://www.google.com/fonts\">Web Font</a><p>The font stack here was created to use the system fonts pre-installed in all known environments.</p><hr> <em><p>FreeSans: Ships with many Linux distros, including Ubuntu</p><p>Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and Arial to get picked up by the browser, even though neither is available in Chrome OS.</p><p>Droid Sans: Ships with all versions of Android.</p><p>Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.</p></em> "
+	},
+	{
+		"el": ".animate-highlight",
+		"title" : "Highlight",
+		"comment": "A common use of transitions is to highlight items in a menu as the user hovers the mouse cursor over them. This makes the action more attractive and sends a less alarming signal to the visitor. "
+	},
+	{
+		"el": ".animate-move",
+		"title" : "Movement",
+		"comment": "Transitions are a great tool to make things look much smoother. "
 	}
+
 ]
 };

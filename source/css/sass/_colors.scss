@@ -1,0 +1,182 @@
+
+@function set-swatch-text-color($color) {
+    @if (lightness( $color ) > 60) {
+      @return #444;
+    }
+    @else {
+      @return #FFFFFF;
+    }
+}
+
+.sg-swatch {
+text-align: center;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.sg-swatch:before {
+	font-size: 1.4em;
+	//@include scut-vcenter-lh(100px);
+}
+
+.shield-blue {
+		background-color: $shield-blue;
+		color: $shield-blue;
+		&:hover {
+			color: set-swatch-text-color($shield-blue);
+		}
+		&:before {
+			content: "#{$shield-blue}";
+		}
+	}
+
+.shield-green {
+	background-color: $shield-green;
+	color: $shield-green;
+		&:hover {
+			color: set-swatch-text-color($shield-green);
+		}
+		&:before {
+			content: "#{$shield-green}";
+		}
+}
+
+.light-gold {
+	background-color: $light-gold;
+	color: $light-gold;
+		&:hover {
+			color: set-swatch-text-color($light-gold);
+		}
+		&:before {
+			content: "#{$light-gold}";
+		}
+}
+
+.dark-gold {
+	background-color: $dark-gold;
+	color: $dark-gold;
+		&:hover {
+			color: set-swatch-text-color($dark-gold);
+		}
+		&:before {
+			content: "#{$dark-gold}";
+		}
+}
+
+.flat-ruby {
+	background-color: $flat-ruby;
+	color: $flat-ruby;
+		&:hover {
+			color: set-swatch-text-color($flat-ruby);
+		}
+		&:before {
+			content: "#{$flat-ruby}";
+		}
+}
+
+// .gray {
+// 	background-color: $gray ;
+// 	color: $gray;
+// 		&:hover {
+// 			color: set-swatch-text-color($gray);
+// 		}
+// 	&:before {
+// 		content: "#{$gray}";
+// 	}
+// }
+.gray-light {
+	background-color: $gray-light;
+	color: $gray-light;
+		&:hover {
+			color: set-swatch-text-color($gray-light);
+		}
+	&:before {
+		content: "#{$gray-light}";
+	}
+}
+.gray-light-2 {
+	background-color: $gray-light-2;
+	color: $gray-light-2;
+		&:hover {
+			color: set-swatch-text-color($gray-light-2);
+		}
+	&:before {
+		content: "#{$gray-light-2}";
+	}
+}
+.gray-light-3 {
+	background-color: $gray-light-3;
+	color: $gray-light-3;
+		&:hover {
+			color: set-swatch-text-color($gray-light-3);
+		}
+	&:before {
+		content: "#{$gray-light-3}";
+	}
+}
+.gray-med {
+	background-color: $gray-med;
+	color: $gray-med;
+		&:hover {
+			color: set-swatch-text-color($gray-med);
+		}
+	&:before {
+		content: "#{$gray-med}";
+	}
+}
+.gray-dark {
+	background-color: $gray-dark ;
+	color: $gray-dark;
+		&:hover {
+			color: set-swatch-text-color($gray-dark);
+		}
+	&:before {
+		content: "#{$gray-dark}";
+	}
+}
+.gray-dark-2 {
+	background-color: $gray-dark-2;
+	color: $gray-dark-2;
+		&:hover {
+			color: set-swatch-text-color($gray-dark-2);
+		}
+	&:before {
+		content: "#{$gray-dark-2}";
+	}
+}
+
+
+
+
+.sg-color-label {
+color: $gray-dark-2;
+font-size: 1em;
+position: absolute;
+bottom: 0;
+left: 0;
+background-color: $pale;
+width: 100%;
+line-height: 3;
+cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+body {
+  padding: 1em;
+}
+
+.sg-code, .sg-annotations {
+  border-radius: $base-border-radius;
+}
+h2.sg-pattern-head a {
+@extend %scut-side-lined;
+}
+
+h2.sg-pattern-head {
+	border-bottom: none;
+	margin-bottom: 1.5em;
+}
+.sg-main {
+max-width: 72em;
+margin: 0 auto;
+padding: 0.5em;
+}
+
+.sg-centering {
+  text-align: center; }
+  /* line 261, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+  .sg-centering > * {
+    display: inline-block; }
+    /* line 263, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+    .sg-centering > * > * {
+      text-align: left; }
+
+
+
+.demo-animate {
+  cursor: default;
+}
+
+  .animate-highlight {
+@include ease;
+background: $gray-light-3;
+  &:hover {
+background: $gray-light-2;
+  }
+}
+
+.animate-move > .demo-shape {
+-webkit-transition: all 0.6s ease-in-out;
+-moz-transition: all 0.6s ease-in-out;
+-ms-transition: all 0.6s ease-in-out;
+-o-transition: all 0.6s ease-in-out;
+transition: all 0.6s ease-in-out;
+}
+
+.loading {
+    /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+
+  /* Netscape */
+  -moz-opacity: 0.5;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.5;
+
+  /* Good browsers */
+  opacity: 0.5;
+}
+
+.demo [class*="u-size-"] {
+background-color: $gray-light;
+text-align: center;
+margin-bottom: 0.5em;
+padding: 1em;
+color: $gray-dark;
+}
+
+.demo [class*="u-size-"]:nth-of-type(2n) {
+background-color: $gray-light-3;
+//color: #ecf0f1;
+}

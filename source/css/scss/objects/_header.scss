@@ -5,15 +5,15 @@
 	@extend .lc;
 }
 
-.logo {
-	float: left;
-	max-width: 8rem;
-	margin: 0.4rem;
+// .logo {
+// 	float: left;
+// 	max-width: 8rem;
+// 	margin: 0.4rem;
 
-	@media all and (min-width: $bp-med) {
-		max-width: 9rem;
-	}
-}
+// 	@media all and (min-width: $bp-med) {
+// 		max-width: 9rem;
+// 	}
+// }
 
 .nav-toggle {
 	float: right;
@@ -33,13 +33,6 @@
 	}
 }
 
-// .search-form {
-// 	overflow: hidden;
-// 	max-height: 0;
-
-// 	@media all and (min-width: $bp-med) {
-// 		float: right;
-// 		max-height: none;
-// 		margin: 0.65em 0.5em 0 0;
-// 	}
-// }
+.site-header {
+	background-color: $gray-light-2;
+}

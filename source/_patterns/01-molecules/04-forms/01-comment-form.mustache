@@ -1,3 +1,5 @@
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Leave a Reply</h3>
 <form method="post" action="{{ url }}" class="comment-form">
 	<fieldset>
 		<div class="field-container">
@@ -10,11 +12,15 @@
 		</div>
 		<div class="field-container">
 			<label for="comment-url">URL</label>
-			<input id="comment-url" type="url" placeholder="Website if you got one" />
+			<input id="comment-url" type="url" placeholder="Website if you've got one" />
 		</div>
 		<div class="field-container">
 			<label for="comment-field">Comment</label>
 			<textarea id="comment-field" rows="5" placeholder="Write you comment here"></textarea>
 		</div>
+		<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" class="font-primary font-secondary">
+		</p>
 	</fieldset>
 </form>
+</div>

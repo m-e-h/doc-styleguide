@@ -1,0 +1,768 @@
+
+
+.tooltip-item {
+  $tooltip-background: rgba(51, 51, 51, 0.9);
+  $tooltip-color: white;
+  $tooltip-width: 16em;
+  $tooltip-arrow-width: 8px;
+
+  border: 1px solid $base-border-color;
+  padding: .5em 1em;
+  border-radius: $base-border-radius;
+  position: relative;
+  margin-bottom: $base-line-height;
+  cursor: default;
+
+  &:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .tooltip {
+    position: absolute;
+    left: 50%;
+    @include box-sizing(border-box);
+    @include transition (all 0.2s ease-in-out);
+    bottom: 130%;
+    background-color: $tooltip-background;
+    border-radius: $base-border-radius;
+    color: $tooltip-color;
+    font-size: .9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
+    line-height: 1.5em;
+    margin-left: -($tooltip-width/2);
+    opacity: 0;
+    padding: 1em;
+    text-align: center;
+    visibility: hidden;
+    min-width: $tooltip-width;
+    z-index: 10;
+    cursor: auto;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &:after {
+      position: absolute;
+      left: 50%;
+      margin-left: -$tooltip-arrow-width;
+      border: $tooltip-arrow-width solid transparent;
+      border-top-color: $tooltip-background;
+      content: '';
+      pointer-events: none;
+      bottom: -$tooltip-arrow-width*2;
+    }
+  }
+}
+
+
+
+/* line 1, scss/objects/_accordion.scss */
+.accordion {
+  margin-bottom: 1em;
+}
+
+/* line 5, scss/objects/_accordion.scss */
+.acc-handle {
+  background: #151d1e;
+  color: white;
+  font-family: "Raleway", Times, "Times New Roman", serif;
+  font-weight: bold;
+  display: block;
+  position: relative;
+  padding: 0.5em;
+  border-bottom: 1px solid #cbd0d3;
+}
+/* line 15, scss/objects/_accordion.scss */
+.acc-handle:after {
+  content: "+";
+  float: right;
+}
+/* line 20, scss/objects/_accordion.scss */
+.acc-handle:hover {
+  color: white;
+  background: #5e6768;
+}
+/* line 26, scss/objects/_accordion.scss */
+.acc-handle.active {
+  background: #5e6768;
+}
+/* line 29, scss/objects/_accordion.scss */
+.acc-handle.active:after {
+  content: "-";
+}
+
+/* === Toggle / Accordion === */
+/* Title for individual section. */
+/* line 41, scss/objects/_accordion.scss */
+.whistles-toggle .whistle-title,
+.whistles-accordion .whistle-title {
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border: 1px solid;
+  border-top-width: 0;
+  // @include fa-icon($chevron-circle-down);
+}
+/* line 49, scss/objects/_accordion.scss */
+.whistles-toggle .whistle-title:before,
+.whistles-accordion .whistle-title:before {
+  float: right;
+}
+
+
+.whistles-toggle .whistle-title:first-child,
+.whistles-accordion .whistle-title:first-child {
+  border-top-width: 1px;
+}
+
+/* Individual toggle section content. */
+/* line 60, scss/objects/_accordion.scss */
+.whistles-toggle .whistle-content,
+.whistles-accordion .whistle-content {
+  margin: -1px 0 0;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  border: 1px solid;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * Whistles
+ * @link http://themehybrid.com/plugins/whistles
+ */
+/* line 6, scss/objects/_tabs.scss */
+.whistles::after,
+.whistle-content::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 15, scss/objects/_tabs.scss */
+.whistles {
+  clear: both;
+  width: 100%;
+  margin: 0 0 1.5rem;
+}
+
+/* line 21, scss/objects/_tabs.scss */
+.whistle-title:hover {
+  cursor: pointer;
+}
+
+/* line 25, scss/objects/_tabs.scss */
+.whistle-content {
+  overflow: hidden;
+}
+
+/* === Tabs === */
+/* Unordered list. */
+/* line 32, scss/objects/_tabs.scss */
+.whistles-tabs .whistles-tabs-nav {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+}
+
+/* Individual list item. */
+/* line 40, scss/objects/_tabs.scss */
+.whistles-tabs-nav li {
+  display: inline;
+}
+
+/* line 44, scss/objects/_tabs.scss */
+.whistles-tabs-nav li a, .whistles-toggle .whistle-title, .whistles-accordion .whistle-title {
+  background-color: #ecf0f1;
+}
+/* line 47, scss/objects/_tabs.scss */
+.whistles-tabs-nav li a:hover, .whistles-toggle .whistle-title:hover, .whistles-accordion .whistle-title:hover {
+  background: #cbd0d3;
+  color: gray-dark;
+}
+
+/* line 53, scss/objects/_tabs.scss */
+.whistles-tabs .whistles-tabs-nav li[aria-selected=true] a {
+  background-color: #fff;
+}
+
+/* Link within list item. */
+/* line 58, scss/objects/_tabs.scss */
+.whistles-tabs-nav li a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border: 1px solid;
+  -webkit-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  background-clip: padding-box;
+}
+
+/* Wraps all of the tab content panels. */
+/* line 68, scss/objects/_tabs.scss */
+.whistles-tabs .whistles-tabs-wrap {
+  position: relative;
+  clear: both;
+  top: -1px;
+  padding: 1.5rem 1.5rem 0;
+  border: 1px solid;
+  border-radius: 0 2px 2px 2px;
+}
+
+/* line 77, scss/objects/_tabs.scss */
+.whistles-tabs-nav li a, .whistles-tabs .whistles-tabs-nav li a:hover, .whistles-tabs .whistles-tabs-wrap, .whistles-toggle .whistle-title, .whistles-accordion .whistle-title, .whistles-toggle .whistle-content, .whistles-accordion .whistle-content {
+  border-color: #cbd0d3;
+}
+
+/* line 81, scss/objects/_tabs.scss */
+.whistles-tabs-nav li a {
+  border-right-width: 0;
+}
+
+/* line 85, scss/objects/_tabs.scss */
+.whistles-tabs-nav li:last-child a {
+  border-right-width: 1px;
+}
+
+/* line 91, scss/objects/_tabs.scss */
+.whistles-tabs .whistles-tabs-nav li[aria-selected=true] a {
+  border-bottom-color: #fff;
+}
+
+
+
+
+.whistles-toggle .whistle-title::after, .whistles-accordion .whistle-title::after {
+float: right;
+@include fa;
+@include icon($chevron-down);
+}
+
+
+
+
+
+.comment {
+  $comment-gutter: 1.4em;
+  $comment-image-padding: 3px;
+  $comment-image-width: 4em;
+  $comment-color: $base-font-color;
+  $comment-background: lighten($base-accent-color, 10);
+  $comment-detail-color: transparentize($comment-color, .5);
+  $comment-image-vert-alignment: top;
+
+  display: table;
+  width: 100%;
+  margin-bottom: $base-line-height;
+  padding-bottom: 1em;
+  border-bottom: 1px solid transparentize($comment-color, .9);
+
+ .comment-image,
+  .comment-content {
+    display: table-cell;
+    vertical-align: $comment-image-vert-alignment;
+  }
+
+  .comment-image {
+    padding-right: $comment-gutter;
+
+    > img {
+      width: $comment-image-width;
+      height: auto;
+      border-radius: $base-border-radius;
+      background: $comment-background;
+      display: block;
+      max-width: none;
+    }
+  
+
+    .comment-reverse-order & {
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
+
+  .comment-content {
+    width: 100%;
+
+   h1 {
+      font-size: 1em;
+      margin-bottom: .5em;
+      font-weight: bold;
+      font-style: normal
+    }
+
+          cite {
+        font-weight: bold;
+      font-style: normal
+      }
+
+    p {
+      margin-bottom: .5em;
+    }
+      .comment-meta {
+      font-style: italic;
+      font-size: .9em;
+      color: $comment-detail-color;
+    }
+
+  }
+
+.comment-reply-link, .comment-reply-login {
+  @include button($light-green);
+float: right;
+margin-right: $comment-gutter;
+
+&:before {
+  @include fa;
+  @include icon($reply);
+  margin-right: .5em;
+}
+}
+}
+.comment-reply-title { 
+
+  &:before {
+  @include fa;
+  @include icon($reply);
+  margin-right: .5em;
+}
+}
+
+.comments .section-title {
+
+    &:before {
+  @include fa;
+  @include icon($comments);
+  margin-right: .5em;
+}
+}
+
+a.comment-permalink {
+@include fa;
+padding-left: 10px;
+}
+
+
+
+.modal {
+  $modal-padding: 3em;
+  $modal-background: $base-body-color;
+  $modal-close-color: $light-gray;
+  $modal-image-height: 135px;
+  $modal-image-width: $modal-image-height;
+
+  label {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  label img {
+    $img-width: 300px;
+    border-radius: $img-width/2;
+    display: block;
+    max-width: $img-width;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  .modal-window { // overlay
+    @include transition(opacity .25s ease);
+    @include position(fixed, 0px 0px 0px 0px);
+    background: rgba(0,0,0, .85);
+    opacity: 0;
+    text-align: left;
+    visibility: hidden;
+    z-index: 99999999999;
+
+    .modal-bg {
+      @include position(absolute, 0px 0px 0px 0px);
+      cursor: pointer;
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: ($modal-padding /2);
+    right: ($modal-padding /2);
+    @include size(1.5em);
+    cursor: pointer;
+    background: $modal-background;
+
+    &:after,
+    &:before {
+      @include position(absolute, 3px 3px 0 50%);
+      @include transform(rotate(45deg));
+      @include size(.15em 1.5em);
+      background: $modal-close-color;
+      content: '';
+      display: block;
+      margin: -3px 0 0 -1px;
+    }
+
+    &:hover:after,
+    &:hover:before {
+      background: darken($modal-close-color, 10);
+    }
+
+    &:before {
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  .modal-inner {
+    @include transition(opacity .25s ease);
+    border-radius: $base-border-radius;
+    background: $modal-background;
+    margin: auto;
+    max-height: 95%;
+    position: relative;
+    overflow: auto;
+    width: 95%;
+    padding: $modal-padding /2;
+    margin-top: .6em;
+
+    @include media($medium-screen) {
+      padding: $modal-padding;
+      width: 60%;
+      max-height: 60%;
+      margin-top: 10em;
+    }
+
+    @include media($large-screen) {
+      width: 50%;
+      margin-top: 10em;
+    }
+
+    h1 {
+      color: $base-font-color;
+      margin-bottom: .6em;
+      text-align: left;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-size: $base-font-size;
+      max-width: 100% !important;
+      padding: 0;
+      text-align: left;
+
+      &.intro {
+        color: $blue;
+        line-height: 1.6em;
+      }
+
+      &.body { 
+        color: $base-font-color;
+        line-height: 1.45em;
+
+        @include media($medium-screen) {
+          @include columns(2 8em);
+        }
+      }
+    }
+
+    a.cta {
+      color: white;
+      display: inline-block;
+      margin-right: .5em;
+      margin-top: 1em;
+
+      &:last-child {
+        padding: 0 2em;
+      }
+    }
+  }
+
+  .modal-state:checked + .modal-window {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-state:checked + .modal-window .modal-inner {
+    top: 0;
+  }
+}
+
+// Based on code by Kasper Mikiewicz
+
+
+
+
+
+.breadcrumb-trail {
+margin: 0 0 1.5rem;
+}
+
+.breadcrumb-trail a {
+display: inline-block;
+opacity: .75;
+&:hover {
+opacity: 1;
+}
+}
+
+.breadcrumb-trail a[rel=home]::before {
+  @include fa;
+@include icon($home);
+}
+
+.breadcrumb-trail .sep {
+display: inline-block;
+padding: 0 5px;
+opacity: .75;
+}
+
+.breadcrumb-trail .sep::before {
+    @include fa;
+@include icon($angle-right);
+}
+
+.breadcrumb-trail span.trail-end {
+opacity: .5;
+}
+
+
+
+.prev.page-numbers, .next.page-numbers {
+  @include button($light-green);
+}
+
+.prev.page-numbers:before {
+  @include icon($chevron-left);
+  @include fa;
+  margin-right: .5em;
+}
+
+.next.page-numbers:after {
+  @include icon($chevron-right);
+  @include fa;
+  margin-left: .5em;
+}
+
+
+
+
+
+
+
+
+
+header.site-header {
+
+
+  background-color: $navigation-background;
+  border-bottom: 1px solid darken($navigation-background, 10);
+  font-family: $sans-serif;
+  height: $navigation-height;
+  width: 100%;
+  z-index: 999;
+}
+  .menu-wrapper {
+    @include outer-container;
+    @include clearfix;
+    position: relative;
+    z-index: 9999;
+  }
+
+  .site-header .logo {
+    float: left;    
+    max-height: $navigation-height;
+    padding-left: $navigation-padding;
+    padding-right: 2em;
+
+    img {
+      max-height: $navigation-height;
+      padding: .8em 0;
+    }
+  }
+
+  .navigation-menu-button {
+    color: $navigation-color;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-family: $sans-serif;
+    font-weight: 700;
+    line-height: $navigation-height;
+    margin: 0;
+    padding-right: 1em;
+    text-transform: uppercase;
+
+    @include media ($horizontal-bar-mode) {
+      display: none;
+    }
+
+    &:hover {
+      color: $navigation-color-hover;
+    }
+  }
+
+  .nav {
+    z-index: 9999999;
+    float: none;
+    @include media ($horizontal-bar-mode) {
+      float: left;
+    }
+  }
+
+  ul#navigation-menu {    
+    clear: both;
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+    z-index: 9999;
+
+    @include media ($horizontal-bar-mode) {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+.nav ul li {
+    background: $navigation-background;
+    display: block;
+    line-height: $navigation-height;
+    overflow: hidden;
+    padding-right: .8em;
+    text-align: right;
+    width: 100%;
+    z-index: 9999;
+
+    @include media ($horizontal-bar-mode) {
+      background: transparent;
+      display: inline;
+      line-height: $navigation-height;
+      padding-right: 2em;
+      text-decoration: none;
+      width: auto;
+    }
+
+    a {
+      font-weight: 400;
+      color: $navigation-color;
+
+      &:hover {
+        color: $navigation-color-hover;
+      }
+    }
+  }
+
+  .active-nav-item a {
+    padding-bottom: 3px;
+    border-bottom: 1px solid $navigation-active-link-color;
+  }
+
+  li.more {
+    padding-right: 0;
+
+    &:hover .submenu {
+      display: block;
+    }
+
+    @include media($horizontal-bar-mode) {
+      position: relative;
+      padding-right: .8em;
+    }
+  }
+
+  li.more a {
+    padding-right: .8em;
+  }
+
+  .submenu {
+    display: none;
+
+    @include media($horizontal-bar-mode) {
+      position: absolute;
+      top: 1em;
+      left: -$navigation-submenu-padding;
+    }
+
+    li {
+      display: block;
+      padding-right: 0;
+
+      @include media($horizontal-bar-mode) {
+        line-height: $navigation-height /1.3;
+
+        &:first-child a {
+          padding-top: 1em;
+        }
+        &:last-child a {
+          border-bottom-left-radius: $base-border-radius;
+          border-bottom-right-radius: $base-border-radius;
+          padding-bottom: .7em;
+        }
+      }
+
+      a {
+        text-align: right;
+        background-color: darken($navigation-background, 3);
+        width: 100%;
+        display: inline-block;
+
+        @include media($horizontal-bar-mode) {
+          width: 12em;
+          background-color: $navigation-background;
+          text-align: left;
+          padding-left: $navigation-submenu-padding;
+        }
+      }
+    }
+  }
+
+  .navigation-tools {
+    @include clearfix;
+    display: block;
+    padding-right: $navigation-padding;
+    padding-left: $navigation-padding/2;
+    clear: both;
+    background: #505050;
+
+    @include media($large-screen) {
+      background: transparent;
+      float: right;
+      clear: none;
+    }
+  }
+
+
+  // .search-bar {
+  //   $search-bar-border-color: $base-border-color;
+  //   $search-bar-border: 1px solid $search-bar-border-color;
+  //   $search-bar-background: lighten($search-bar-border-color, 10);
+
+  //   padding: 13px 5px; 
+  //   float: left;
+
+
+  //   // @include media($horizontal-bar-mode) {
+  //   //   width: 16em;
+  //   //   position: relative; 
+  //   //   display: inline-block;
+
+  //   //   input {
+  //   //     @include box-sizing(border-box);
+  //   //     display: block;
+  //   //   }
+  //   // }
+  // }

@@ -31,3 +31,38 @@
 		}
 	}
 }
+
+
+
+
+/* === Toggle / Accordion === */
+
+	/* Title for individual section. */
+	.whistles-toggle    .whistle-title,
+	.whistles-accordion .whistle-title {
+		margin:      0;
+		padding:     0.75rem 1.5rem;
+		font-size:   0.9375rem;
+		font-weight: 700;
+		border:      1px solid;
+		border-top-width: 0;
+		&:after {
+			content: "\f13a";
+			@extend %font-awesome;
+			float: right;
+		}
+	}
+
+	.whistles-toggle    .whistle-title:first-child, 
+	.whistles-accordion .whistle-title:first-child { border-top-width: 1px; }
+
+	/* Individual toggle section content. */
+	.whistles-toggle .whistle-content,
+	.whistles-accordion .whistle-content {
+		margin:  -1px 0 0;
+		padding: 1.5rem 1.5rem 0 1.5rem;
+		border:  1px solid;
+
+		-moz-box-sizing: border-box;
+		     box-sizing: border-box;
+	}

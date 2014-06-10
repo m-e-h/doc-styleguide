@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    $MESSAGING
+\*------------------------------------*/
+
+// Alerts
+.alert {
+	padding-left: 2em;
+	margin-bottom: 1em;
+	color: $gray-dark;
+	border-radius: $base-border-radius;
+	position: relative;
+}
+
+.alert-error {
+	background: $alert-error;
+}
+
+.alert-information {
+	background: $alert-information;
+}
+
+.alert-valid {
+	background: $alert-valid;
+}
+
+.alert-warning {
+	background: $alert-warning;
+}
+
+.alert p {
+display: inline-block;
+margin-left: 4em;
+cursor: default;
+}
+
+.alert:before {
+display: inline-block;
+font-family: FontAwesome;
+@include scut-center-transform(y);
+font-size: 2em;
+font-style: normal;
+font-weight: normal;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.alert-error:before {
+content: "\f057";
+color: darken($alert-error, 20);
+}
+
+.alert-information:before {
+content: "\f05a";
+color: darken($alert-information, 20);
+}
+
+.alert-valid:before {
+content: "\f058";
+color: darken($alert-valid, 20);
+}
+
+.alert-warning:before {
+content: "\f06a";
+color: darken($alert-warning, 20);
+}

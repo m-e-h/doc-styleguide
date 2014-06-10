@@ -1,5 +1,5 @@
 .animate-fade {
-	@include transition(opacity, 0.3s, ease-out);
+	@include transition(opacity, 0.1s, ease-in-out);
 
 	&:hover {
 		opacity: 0;
@@ -8,6 +8,6 @@
 
 .animate-move {
 	> .demo-shape {
-		@include transition(all, 0.8s, ease-in-out);
+		@include transition(all, 0.6s, ease-in-out);
 	}
 }

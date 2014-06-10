@@ -1,16 +1,52 @@
-//Article
-.article-header {
-	h1 {
-		font-size: 2.5em;
-	}
+
+.main {
+max-width: 80em;
+margin: 0 auto;
+padding-top: 3rem;
+word-wrap: break-word;
+word-break: normal;
+padding-left: 1em;
+padding-right: 1em;
 }
 
-.byline {
-	font-size: $font-size-small-2;
-	font-style: italic;
-	margin-bottom: $space-half;
+.entry-title {
+text-align: center;
 }
 
+.divider-icon {
+@include scut-side-lined;
+color: $shield-blue;
+font-size: 1.4em;
+}
+
+.divider-icon:before, .divider-icon:after {
+	color: $gray-light-3;
+	padding-bottom: 10px;
+	max-width: 200px;
+}
+
+.entry-content {
+max-width: 580px;
+margin: 0 auto;
+}
+
+
+.entry-author {
+	margin-right: 5px;
+}
+.entry-published:before {
+content: '\f133';
+@extend %font-awesome;
+padding-right: 3px;
+}
+
+.entry-published {
+	cursor: default;
+	color: $gray-med;
+	border-bottom: 1px dotted #d5d5d5;
+font-style: normal;
+font-variant: small-caps;
+}
 //Social Share
 .social-share {
 	overflow: hidden;
@@ -33,4 +69,33 @@
 			//background: $gray-light-2;
 		}
 	}
+}
+
+
+
+#cross {
+   width: 100px;
+   height: 100px;
+   position: relative;
+}
+
+#cross:before, #cross:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #d00;
+}
+
+#cross:before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+#cross:after {
+  top: 50%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
 }

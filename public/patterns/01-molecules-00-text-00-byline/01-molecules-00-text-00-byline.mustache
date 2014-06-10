@@ -1,1 +1,4 @@
-&lt;div class=&quot;byline&quot;&gt;by {{ author.first-name }} {{ author.last-name }}&lt;/div&gt;
+&lt;div class=&quot;entry-byline&quot;&gt;
+				&lt;span class=&quot;entry-author&quot; itemprop=&quot;author&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/Person&quot;&gt;&lt;a href=&quot;{{ url }}&quot; title=&quot;Posts by {{ author.first-name }} {{ author.last-name }}&quot; rel=&quot;author&quot; class=&quot;url fn n&quot; itemprop=&quot;url&quot;&gt;&lt;span itemprop=&quot;name&quot;&gt;By {{ author.first-name }} {{ author.last-name }}&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;
+				{{&gt; atoms-time }}
+				&lt;/div&gt;

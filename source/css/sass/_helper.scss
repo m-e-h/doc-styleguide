@@ -1,0 +1,24 @@
+
+
+.screen-reader-text, .assistive-text {
+@include scut-hide-visually;
+}
+
+/* Display Classes */
+.hide-small {
+    @include breakpoint(max-width $bishop) {
+        display: none;
+    }
+}
+
+.hide-med {
+  @include breakpoint($bishop $cardinal) {
+        display: none;
+    }
+}
+
+.hide-large {
+    @include breakpoint($cardinal) {
+        display: none;
+    }
+}
