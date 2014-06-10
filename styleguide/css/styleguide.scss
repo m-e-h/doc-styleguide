@@ -48,12 +48,12 @@
 $sg-font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 
 /* Style Guide Interface Colors */ 
-$sg-primary : #222;
-$sg-secondary : #808080;
-$sg-tertiary : #ddd;
-$sg-quaternary : #fff;
+$sg-primary : #5E6768;
+$sg-secondary : #CBD0D3;
+$sg-tertiary : #ECF0F1;
+$sg-quaternary : #FBFCFC;
 $sg-quinary : #999;
-$sg-tint : rgba(255,255,255,0.05);
+$sg-tint : rgba(255,255,255,0.07);
 $sg-tint-2 : rgba(255,255,255,0.25);
 $sg-tone : rgba(0,0,0,0.1);
 $sg-tone-2 : rgba(0,0,0,0.3);
@@ -362,8 +362,8 @@ $animate-quick: 0.2s;
 
 		&:active, &:focus {
 			outline: 0;
-			background: $sg-quinary;
-			color: #000;
+			background: $sg-tertiary;
+			color: $sg-primary;
 		}
 	}
 }
@@ -375,8 +375,8 @@ $animate-quick: 0.2s;
 
 	&:hover {
 		.sg-input {
-			background: $sg-quinary;
-			color: #000;
+			background: $sg-secondary;
+			color: $sg-primary;
 		}
 	}
 
@@ -428,8 +428,8 @@ $animate-quick: 0.2s;
 	margin: -2px 0 0 0;
 	padding: 0;
 	border: 0;
-	background-color: #222;
-	color: gray;
+	background-color: $sg-primary;
+	color: $sg-tertiary;
 	width: 25px;
 	text-align: right;
 
@@ -440,7 +440,7 @@ $animate-quick: 0.2s;
 
 .sg-input-active {
 	background-color: #fff;
-	color: #000;
+	color: $sg-primary;
 }
 
 .sg-view {

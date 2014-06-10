@@ -1,9 +1,18 @@
-&lt;li class=&quot;comment-container&quot;&gt;
-	&lt;div class=&quot;comment-meta&quot;&gt;
-		{{&gt; atoms-avatar }}
-		&lt;h4 class=&quot;comment-name&quot;&gt;&lt;a href=&quot;#&quot;&gt;{{ name.first }} {{ name.last }}&lt;/a&gt;&lt;/h4&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;comment-text&quot;&gt;
-		&lt;p&gt;{{ description }}&lt;/p&gt;
-	&lt;/div&gt;
+&lt;li id=&quot;comment-1&quot; class=&quot;comment&quot; itemprop=&quot;comment&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/UserComments&quot;&gt;
+	&lt;article&gt;
+	&lt;div class=&quot;comment-image&quot;&gt;
+			{{&gt; atoms-avatar }}&lt;/div&gt;
+	&lt;div class=&quot;comment-content&quot; itemprop=&quot;commentText&quot;&gt;
+			&lt;h1 class=&quot;font-headlines&quot;&gt;&lt;cite class=&quot;comment-author&quot; itemprop=&quot;creator&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/Person&quot;&gt;&lt;a href=&quot;https://wordpress.org/&quot; rel=&quot;external nofollow&quot; class=&quot;url fn n&quot; itemprop=&quot;url&quot;&gt;&lt;span itemprop=&quot;name&quot;&gt;John Doe&lt;/span&gt;&lt;/a&gt;&lt;/cite&gt;&lt;/h1&gt;
+			&lt;p&gt;{{ description }}&lt;/p&gt;
+	
+
+		&lt;footer class=&quot;comment-meta&quot;&gt;
+			&lt;time class=&quot;comment-published&quot; datetime=&quot;2014-04-22T14:20:21-04:00&quot; title=&quot;Tuesday, April 22, 2014, 2:20 pm&quot; itemprop=&quot;commentTime&quot;&gt;1 month ago&lt;/time&gt;
+			&lt;a class=&quot;comment-permalink&quot; href=&quot;http://127.0.0.1:8080/wordpress/hello-world/#comment-1&quot; itemprop=&quot;url&quot;&gt;&amp;#xf0c1&lt;/a&gt;
+		&lt;/footer&gt;&lt;!-- .comment-meta --&gt;
+		&lt;a itemprop=&quot;replyToUrl&quot; class=&quot;comment-reply-link font-secondary&quot; href=&quot;/wordpress/hello-world/?replytocom=1#respond&quot; onclick=&quot;return addComment.moveForm(&amp;quot;comment-1&amp;quot;, &amp;quot;1&amp;quot;, &amp;quot;respond&amp;quot;, &amp;quot;1&amp;quot;)&quot;&gt;Reply&lt;/a&gt;
+&lt;/div&gt;&lt;!-- .comment-content --&gt;
+		&lt;/article&gt;
+
 &lt;/li&gt;
