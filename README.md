@@ -1,4 +1,2 @@
-doc-styleguide
+doc pattern library
 ==============
-
-php core/builder.php -wr
