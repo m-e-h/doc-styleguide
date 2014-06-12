@@ -3,63 +3,114 @@
 \*------------------------------------*/
 
 // Alerts
+// .alert {
+// 	padding-left: 2em;
+// 	margin-bottom: 1em;
+// 	color: $gray-dark;
+// 	border-radius: $base-border-radius;
+// 	position: relative;
+// }
+
+// .alert-error {
+// 	background: $alert-error;
+// }
+
+// .alert-information {
+// 	background: $alert-information;
+// }
+
+// .alert-valid {
+// 	background: $alert-valid;
+// }
+
+// .alert-warning {
+// 	background: $alert-warning;
+// }
+
+// .alert p {
+// display: inline-block;
+// margin-left: 4em;
+// cursor: default;
+// }
+
+// .alert:before {
+// display: inline-block;
+// font-family: FontAwesome;
+// @include scut-center-transform(y);
+// font-size: 2em;
+// font-style: normal;
+// font-weight: normal;
+// -webkit-font-smoothing: antialiased;
+// -moz-osx-font-smoothing: grayscale;
+// }
+
+// .alert-error:before {
+// content: "\f057";
+// color: darken($alert-error, 20);
+// }
+
+// .alert-information:before {
+// content: "\f05a";
+// color: darken($alert-information, 20);
+// }
+
+// .alert-valid:before {
+// content: "\f058";
+// color: darken($alert-valid, 20);
+// }
+
+// .alert-warning:before {
+// content: "\f06a";
+// color: darken($alert-warning, 20);
+// }
+
+
+//Alerts
+
 .alert {
-	padding-left: 2em;
-	margin-bottom: 1em;
-	color: $gray-dark;
-	border-radius: $base-border-radius;
-	position: relative;
-}
-
-.alert-error {
-	background: $alert-error;
-}
-
-.alert-information {
-	background: $alert-information;
-}
-
-.alert-valid {
-	background: $alert-valid;
-}
-
-.alert-warning {
-	background: $alert-warning;
 }
 
 .alert p {
-display: inline-block;
-margin-left: 4em;
-cursor: default;
+display: inline;
+vertical-align: middle;
 }
-
 .alert:before {
-display: inline-block;
-font-family: FontAwesome;
-@include scut-center-transform(y);
-font-size: 2em;
-font-style: normal;
-font-weight: normal;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
+@extend %fa;
+margin-right: 7px;
+border: 2px solid;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+text-align: center;
+line-height: 1.5;
+font-size: 1.3em;
+vertical-align: middle;
 }
 
-.alert-error:before {
-content: "\f057";
-color: darken($alert-error, 20);
+.alert-error {
+	@extend %flash-error;
+	&:before {
+		@include icon($times);
+	}
 }
 
-.alert-information:before {
-content: "\f05a";
-color: darken($alert-information, 20);
+.alert-information {
+	@extend %flash-notice;
+	&:before {
+		@include icon($info);
+	}
 }
 
-.alert-valid:before {
-content: "\f058";
-color: darken($alert-valid, 20);
+.alert-valid {
+	@extend %flash-success;
+	&:before {
+		@include icon($check);
+	}
 }
 
-.alert-warning:before {
-content: "\f06a";
-color: darken($alert-warning, 20);
+.alert-warning {
+	@extend %flash-alert;
+	&:before {
+		@include icon($exclamation);
+	}
 }

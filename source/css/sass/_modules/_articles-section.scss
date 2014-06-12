@@ -10,23 +10,110 @@
 *
 **/
 
-.articles-section {
-  background: $colorGrayBackground;
-  text-align: center;
+// .articles-section {
+//   background: $colorGrayBackground;
+//   text-align: center;
 
-  .article-section__icon {
-    margin-top: 0;
-    margin-bottom: 8px; // by default, icon-circle has margin-top/bottom of 4px to fix baseline issues, in this specific case, we need to remove margin-top, so in order to normalize baseline again, we add it to margin-bottom
-    top: -23px;
-    box-shadow: 0 0 0 2px white;
-  }
+//   .article-section__icon {
+//     margin-top: 0;
+//     margin-bottom: 8px; // by default, icon-circle has margin-top/bottom of 4px to fix baseline issues, in this specific case, we need to remove margin-top, so in order to normalize baseline again, we add it to margin-bottom
+//     top: -23px;
+//     box-shadow: 0 0 0 2px white;
+//   }
+// }
+
+// .articles-count {
+//   color: $colorGray;
+//   font-family: $fontHighlight;
+//   display: block;
+//   position: relative;
+//   top: -($lineHeight);
+//   font-weight: 400;
+// }
+
+
+
+.main {
+max-width: 80em;
+margin: 0 auto;
+padding-top: 3rem;
+word-wrap: break-word;
+word-break: normal;
+padding-left: 1em;
+padding-right: 1em;
 }
 
-.articles-count {
-  color: $colorGray;
-  font-family: $fontHighlight;
-  display: block;
-  position: relative;
-  top: -($lineHeight);
-  font-weight: 400;
+.entry-title {
+text-align: center;
+}
+
+.divider-icon {
+@include scut-side-lined;
+color: $shield-blue;
+font-size: 1.4em;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.divider-icon:before, .divider-icon:after {
+  color: $gray-light-3;
+  padding-bottom: 10px;
+  max-width: 200px;
+}
+
+.entry-content {
+max-width: 580px;
+margin: 0 auto;
+}
+
+
+.entry-author {
+  margin-right: 5px;
+}
+.entry-published:before {
+content: '\f133';
+@include fa;
+padding-right: 3px;
+}
+
+.entry-published {
+  cursor: default;
+  color: $gray-med;
+  border-bottom: 1px dotted #d5d5d5;
+font-style: normal;
+font-variant: small-caps;
+}
+
+
+
+
+#cross {
+   width: 100px;
+   height: 100px;
+   position: relative;
+}
+
+#cross:before, #cross:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #d00;
+}
+
+#cross:before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+#cross:after {
+  top: 50%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
 }

@@ -43,6 +43,8 @@
 /* Defaults */
 /* Dimensions */
 /* Breakpoints */
+
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 /*------------------------------------*\
     $PATTERN LAB MIXINS 
 \*------------------------------------*/
@@ -60,7 +62,7 @@
 /* line 115, styleguide.scss */
 .sg-nav-wrapper {
   overflow: hidden;
-  background: #ecf0f1;
+  //background: #ecf0f1;
 }
 
 /* line 120, styleguide.scss */
@@ -94,7 +96,7 @@
 /* Header */
 /* line 151, styleguide.scss */
 .sg-header {
-  background: #5e6768;
+ // background: #5e6768;
   color: #fbfcfc;
   font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   text-transform: uppercase;
@@ -142,7 +144,7 @@
 /* line 188, styleguide.scss */
 .sg-header a:hover, .sg-header a:focus, .sg-header a.active {
   color: #fbfcfc;
-  background: rgba(255, 255, 255, 0.07);
+ // background: rgba(255, 255, 255, 0.07);
 }
 /* line 194, styleguide.scss */
 .sg-header ol ol ol a {
@@ -232,7 +234,7 @@
 /* line 270, styleguide.scss */
 .sg-acc-handle.active {
   color: #fbfcfc;
-  background: rgba(255, 255, 255, 0.07);
+ // background: rgba(255, 255, 255, 0.07);
 }
 /* line 273, styleguide.scss */
 .sg-acc-handle.active:after {
@@ -263,7 +265,7 @@
 }
 /* line 295, styleguide.scss */
 .sg-acc-panel li {
-  background: #5e6768;
+ // background: #5e6768;
 }
 /* line 299, styleguide.scss */
 .sg-acc-panel.active {
@@ -338,14 +340,14 @@
 /* line 363, styleguide.scss */
 .sg-control .sg-input:active, .sg-control .sg-input:focus {
   outline: 0;
-  background: #ecf0f1;
+//  background: #ecf0f1;
   color: #5e6768;
 }
 
 /* line 371, styleguide.scss */
 .sg-current-size {
   font-size: 70%;
-  color: #cbd0d3;
+  color: #777;
   padding: 0.85em 0.7em;
 }
 /* line 377, styleguide.scss */
@@ -410,8 +412,8 @@
   margin: -2px 0 0 0;
   padding: 0;
   border: 0;
-  background-color: #5e6768;
-  color: #ecf0f1;
+  background-color: #eee;
+  color: #222;
   width: 25px;
   text-align: right;
 }
@@ -770,7 +772,7 @@ span.sg-pattern-state:before {
 /* line 786, styleguide.scss */
 .sg-code, .sg-annotations {
   clear: both;
-  background: #ecf0f1;
+  background: #F8F8F8;
   color: #5e6768;
   padding: 1em 0.5em;
   margin: 1em 0;
@@ -964,3 +966,69 @@ div.clear {
 
 /******************************************************************/
 /* End Pattern Lab Interface code */
+
+
+
+a#sg-size-s:before {
+  content: "\f10b"; 
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-right: 7px;
+    font-size: 1.5em;
+line-height: 0;
+}
+
+a#sg-size-m:before {
+  content: "\f10a"; 
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-right: 7px;
+    font-size: 1.5em;
+line-height: 0;
+}
+
+a#sg-size-l:before {
+  content: "\f108"; 
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-right: 7px;
+    font-size: 1.5em;
+line-height: 0;
+}
+
+
+.sg-header {
+background: rgba(255, 255, 255, 0.9);
+color: #777;
+box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+
+.sg-header a {
+  color: #777;
+}
+.sg-acc-panel li {
+background: #f1f1f1;
+}
+
+.sg-header a:hover, .sg-header a:focus, .sg-header a.active {
+  color: #777;
+background: rgba(238, 238, 238, 0.9);
+}
+.sg-header a:focus, .sg-header a.active {
+color: #222;
+}

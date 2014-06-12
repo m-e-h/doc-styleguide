@@ -28,10 +28,6 @@ em {
 font-style: italic;
 }
 
-b, strong {
-font-weight: bold;
-}
-
 hr {
     display: block;
     height: 1px;
@@ -80,9 +76,9 @@ h6 {
   font-size: $base-font-size;
 }
 
-p {
-  margin: 0 0 ($base-line-height * .5);
-}
+// p {
+//   margin: 0 0 ($base-line-height * .5);
+// }
 
 a {
   @include transition(color 0.1s linear);

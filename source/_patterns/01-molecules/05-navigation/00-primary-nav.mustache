@@ -1,18 +1,24 @@
-
-    <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
-    <div class="nav">
-      <ul id="navigation-menu">
-        <li class="nav-link"><a href="{{ url }}">Products</a></li>
-        <li class="nav-link"><a href="{{ url }}">About Us</a></li>
-        <li class="nav-link"><a href="{{ url }}">Contact</a></li>
-        <li class="nav-link more"><a href="{{ url }}">More</a>
-          <ul class="submenu">
-            <li><a href="{{ url }}">Submenu Item</a></li>
-            <li><a href="{{ url }}">Another Item</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="https://googledrive.com/host/0B-B36bvbQPRlenJfTnYycVIwTWc/naver.js"></script>
+<div class="nav-collapse" id="nav">
+<ul id="menu-primary-items" class="menu-items">
+<li class="menu-item"><a href="#">Home</a></li>
+<li class="menu-item"><a href="#">Blog</a></li>
+<li class="menu-item"><a href="#">Front Page</a></li>
+<li class="menu-item"><a href="#">About The Tests</a></li>
+<li class="menu-item menu-item-has-children dropdown"><a href="#" class="dropdown-toggle">Level 1</a>
+<ul class="sub-menu">
+  <li class="menu-item menu-item-has-children dropdown"><a href="{{ url }}" class="dropdown-toggle">Level 2</a>
+  <ul class="sub-menu">
+    <li class="menu-item"><a href="{{ url }}">Level 3</a></li>
+    <li class="menu-item"><a href="{{ url }}">Level 3a</a></li>
+    <li class="menu-item"><a href="{{ url }}">Level 3b</a></li>
+  </ul>
+</li>
+  <li class="menu-item"><a href="{{ url }}">Level 2a</a></li>
+  <li class="menu-item"><a href="{{ url }}">Level 2b</a></li>
+</ul>
+</li>
+<li class="menu-item"><a href="#">Lorem Ipsum</a></li>
+<li class="menu-item"><a href="#">Page A</a></li>
+<li class="menu-item"><a href="#">Page B</a></li>
+</ul>
+</div>

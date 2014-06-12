@@ -95,21 +95,23 @@ select {
     input[type=search] {
       @include appearance(none);
       width: 100%;
-      padding: .5em .8em;
+      padding: .52em .8em;
       font-size: .9em;
       font-style: italic;
       border-radius: $base-border-radius * 2;
       margin: 0;
     }
 
-    input.search-submit {
+    input[type="submit"].search-submit {
+      @include button($blue);
       position: absolute;
+      line-height: 0;
+      border-color: $blue;
       top: 0;
       right: 0;
       bottom: 0;
-      outline: none;
-      padding: 5px 10px;
-      @include border-left-radius(0);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
   }
 

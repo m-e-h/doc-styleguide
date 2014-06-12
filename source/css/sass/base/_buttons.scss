@@ -1,29 +1,14 @@
-
-
-
-
 .btn {
   @include button($blue);
 }
 
-.btn.alt {
-  @include button($light-green);
-}
-
 input[type="submit"] {
-  @include button($gray-light-3);
+  @include button($light-green);
+  border: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+@include breakpoint($priest) {
+  .btn-full {
+    max-width: 16em!important;
+  }
+}

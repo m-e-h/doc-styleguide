@@ -258,19 +258,20 @@ input[type="search"].search-field {
 }
 
 
-input[type="submit"].search-submit {
-    @extend %font-awesome;
-    margin: 0;
-    height: 38px;
-    background-color: $shield-blue;
-    color: #fff;
+// input[type="submit"].search-submit {
+//     @extend %font-awesome;
+//     margin: 0;
+//     height: 38px;
+//     background-color: $shield-blue;
+//     color: #fff;
 
-    &:hover, &:focus {
-        color: #fff;
-    }
-}
+//     &:hover, &:focus {
+//         color: #fff;
+//     }
+// }
 
 .search-form input[type="submit"].search-submit {
+    @include button($blue);
     @include span(3 at 10);
     @include border-left-radius(0);
     }
