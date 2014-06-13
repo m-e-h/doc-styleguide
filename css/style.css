@@ -4563,47 +4563,52 @@ h2.sg-pattern-head {
   margin-bottom: 1.5em;
 }
 
-/* line 16, sass/_sguide.scss */
+/* line 17, sass/_sguide.scss */
+#molecules-primary-nav, #organisms-header {
+  margin-bottom: 11em;
+}
+
+/* line 20, sass/_sguide.scss */
 .sg-main {
   max-width: 72em;
   margin: 0 auto;
   padding: 0.5em;
 }
 
-/* line 22, sass/_sguide.scss */
+/* line 26, sass/_sguide.scss */
 .sg-centering {
   text-align: center;
 }
 
 /* line 261, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
-/* line 25, sass/_sguide.scss */
+/* line 29, sass/_sguide.scss */
 .sg-centering > * {
   display: inline-block;
 }
 
 /* line 263, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
-/* line 28, sass/_sguide.scss */
+/* line 32, sass/_sguide.scss */
 .sg-centering > * > * {
   text-align: left;
 }
 
-/* line 33, sass/_sguide.scss */
+/* line 37, sass/_sguide.scss */
 .demo-animate {
   cursor: default;
 }
 
-/* line 37, sass/_sguide.scss */
+/* line 41, sass/_sguide.scss */
 .animate-highlight {
   -webkit-transition: 0.1s;
   transition: 0.1s;
   background: #cbd0d3;
 }
-/* line 40, sass/_sguide.scss */
+/* line 44, sass/_sguide.scss */
 .animate-highlight:hover {
   background: #ecf0f1;
 }
 
-/* line 45, sass/_sguide.scss */
+/* line 49, sass/_sguide.scss */
 .animate-move > .demo-shape {
   -webkit-transition: all 0.6s ease-in-out;
   -moz-transition: all 0.6s ease-in-out;
@@ -4612,7 +4617,7 @@ h2.sg-pattern-head {
   transition: all 0.6s ease-in-out;
 }
 
-/* line 53, sass/_sguide.scss */
+/* line 57, sass/_sguide.scss */
 .loading {
   /* IE 8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -4626,7 +4631,7 @@ h2.sg-pattern-head {
   opacity: 0.5;
 }
 
-/* line 70, sass/_sguide.scss */
+/* line 74, sass/_sguide.scss */
 .demo [class*="u-size-"] {
   background-color: #ecf0f1;
   text-align: center;
@@ -4635,7 +4640,7 @@ h2.sg-pattern-head {
   color: #5e6768;
 }
 
-/* line 78, sass/_sguide.scss */
+/* line 82, sass/_sguide.scss */
 .demo [class*="u-size-"]:nth-of-type(2n) {
   background-color: #cbd0d3;
 }
